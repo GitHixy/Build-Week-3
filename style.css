@@ -1,0 +1,31 @@
+*{
+    object-fit: cover;
+}
+#sideBar_sx{
+    width: 25%;
+    background-color: black;
+    color: lightgray;
+    height: 100vh;
+    padding-inline: 10px;
+}
+#sideBar_sx svg{
+ padding: 0 !important;
+ opacity: 50;
+}
+#sideBar_sx h5{
+    margin:0
+}
+.svgContainer:hover{
+    cursor: pointer;
+    color:white;
+    opacity: 100;
+}
+hr{
+   border: 1px solid white;
+   opacity: 100;
+
+}
+main{
+    width: 75%;
+    background-color: gray;
+}
