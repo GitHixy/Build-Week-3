@@ -1,31 +1,87 @@
-*{
-    object-fit: cover;
+* {
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+  font-family: Gotham !important;
 }
-#sideBar_sx{
-    width: 25%;
-    background-color: black;
-    color: lightgray;
-    height: 100vh;
-    padding-inline: 10px;
-}
-#sideBar_sx svg{
- padding: 0 !important;
- opacity: 50;
-}
-#sideBar_sx h5{
-    margin:0
-}
-.svgContainer:hover{
-    cursor: pointer;
-    color:white;
-    opacity: 100;
-}
-hr{
-   border: 1px solid white;
-   opacity: 100;
 
+body {
+  height: 100vh;
 }
-main{
-    width: 75%;
-    background-color: gray;
+
+#sideBar_sx {
+  width: 25%;
+  background-color: black;
+  color: lightgray;
+  height: 100%;
+  padding-inline: 15px;
+}
+
+#sideBar_sx svg {
+  padding: 0 !important;
+  opacity: 50;
+}
+
+#sideBar_sx h5 {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.svgContainer:hover {
+  cursor: pointer;
+  color: white;
+  opacity: 100;
+}
+
+hr {
+  border-top: 1px solid white;
+  opacity: 100;
+}
+
+#main {
+  width: 75%;
+  height: 100%;
+  background: rgb(35, 35, 35);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(35, 35, 35, 1) 0%,
+    rgba(66, 66, 66, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(35, 35, 35, 1) 0%,
+    rgba(66, 66, 66, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(35, 35, 35, 1) 0%,
+    rgba(66, 66, 66, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#232323",endColorstr="#424242",GradientType=1);
+}
+
+/* main */
+
+.rettangolo {
+  width: 1000px;
+  height: 250px;
+  background-color: black;
+  color: white;
+}
+
+.rettangolo img {
+  width: 200px;
+  margin: 25px;
+}
+
+.rettangolo button {
+  font-weight: 500;
+  width: 80px;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+
+.btn-dark {
+    border: 1px solid white;
 }
