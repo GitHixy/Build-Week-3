@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+  font-family: "Gotham";
+}
+
+body {
+  background-color: #121212;
+}
+
+#sideBar_sx {
+  width: 25%;
+  background-color: black;
+  color: lightgray;
+  padding-inline: 15px;
+}
+
+#sideBar_sx svg {
+  padding: 0 !important;
+  opacity: 50;
+}
+
+#sideBar_sx h5 {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.svgContainer:hover {
+  cursor: pointer;
+  color: white;
+  opacity: 100;
+}
+
+hr {
+  border-top: 1px solid white;
+  opacity: 100;
+}
+
+#main {
+  width: 75%;
+  height: 100%;
+}
+
+.btn-success {
+  background-color: #20df64;
+}
+
+/* main */
+
+.rettangolo {
+  width: 100%;
+  height: 250px;
+  background-color: black;
+  color: white;
+}
+
+.rettangolo img {
+  width: 200px;
+  margin: 25px;
+}
+
+.rettangolo button {
+  font-weight: 500;
+  width: 80px;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+
+.btn-dark {
+  border: 1px solid white;
+}
+
+.card {
+  border-radius: 20px;
+  background-color: #181818;
+  color: lightgray;
+  padding: 0;
+}
+
+.card:hover {
+  background-color: #282828;
+  cursor: pointer;
+}
+
+.album-img {
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+}
+.artistImg {
+  height: 300px;
+}
+.artistImg img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
