@@ -90,8 +90,18 @@ hr {
   border-radius: 25px;
 }
 .artistImg {
-  height: 300px;
+  height: 500px;
 }
+
+#gradient {
+  background: rgb(35, 35, 35) !important;
+  background: linear-gradient(
+    0deg,
+    rgba(35, 35, 35, 1) 0%,
+    rgba(66, 66, 66, 0) 100%
+  );
+}
+
 .artistImg img {
   object-fit: cover;
   height: 100%;
