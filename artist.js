@@ -2,6 +2,7 @@ const url = "https://striveschool-api.herokuapp.com/api/deezer";
 const params = new URLSearchParams(document.location.search) 
 const id = params.get("id") 
 const main = document.getElementById('main')
+const addedId = {};
 
 const getArtist = async () => {
   const response = await fetch(url + `/artist/${id}`);
@@ -9,7 +10,7 @@ const getArtist = async () => {
   console.log(data);
 
   main.innerHTML += `
-  <div class="artist-info">
+  <div class="artist-info ">
             <div class="artistImg">
             <div id="gradient"></div>
                 <img src=${data.picture_xl}
@@ -25,13 +26,14 @@ const getArtist = async () => {
             </div>
         </div>
   `;
-
     const tracklist = await fetch(data.tracklist)
     const tracklistRes = await tracklist.json()
     const cardCont = document.getElementById('card-container')
 
     console.log(tracklistRes.data);
     for (const album of tracklistRes.data) {
+
+      if (!addedId[album.album.id]) {
         cardCont.innerHTML += `
         
         <div class="card d-flex align-items-start col-lg-2">
@@ -48,7 +50,9 @@ const getArtist = async () => {
         </p>
       </div>
     </div>`;
+    addedId[album.album.id] = true;
     }
+  }
 
 };
 

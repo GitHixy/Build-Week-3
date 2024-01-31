@@ -1,8 +1,13 @@
+@font-face {
+  font-family: Gotham;
+  src: url('./assets/font/Gotham-Black.otf')  format('opentype');
+}
+
 * {
   padding: 0;
   margin: 0;
   object-fit: cover;
-  font-family: 'Gotham';
+  font-family: Gotham;
 }
 
 body {
@@ -51,7 +56,7 @@ hr {
 
 .rettangolo {
   width: 100%;
-  height: 250px;
+  height: 10%;
   background-color: black;
   color: white;
 }

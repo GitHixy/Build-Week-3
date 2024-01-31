@@ -14,7 +14,7 @@ const getAlbum = async () => {
                     alt="">
                 </div>
                 <h1 class="text-white">${data.title}</h1>
-                <table class="table">
+                <table class="table table-dark">
             <thead>
               <tr>
                 <th scope="col">#</th>
