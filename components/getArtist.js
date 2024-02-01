@@ -30,7 +30,7 @@ export const getArtist = async (id) => {
     if (!addedId[album.album.id]) {
       cardCont.innerHTML += `
           
-          <div class="card d-flex align-items-start col-lg-2 col-md-4 col-sm-6">
+          <div class="card d-flex align-items-start col-lg-2 col-md-4 col-sm-6 col-12">
         <img
           id=${album.album.id}
           src=${album.album.cover_big}
