@@ -1,13 +1,12 @@
 import { cardCont } from "../index.js";
 import { addedId } from "../index.js";
 import { iteraAlbumECanzoni } from "./iteraAlbumECanzoni.js";
-
-const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
+import { urlSearch } from "../index.js";
 
 export const fetchSearch = async (inputValue) => {
     if (inputValue !== "") {
       cardCont.innerHTML = "";
-      const response = await fetch(url + inputValue);
+      const response = await fetch(urlSearch + inputValue);
       const data = await response.json();
     
       data.data.map((found) => {

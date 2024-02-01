@@ -1,7 +1,7 @@
-const url = "https://striveschool-api.herokuapp.com/api/deezer";
+import { urlInfoFetch } from "../index.js";
 
 export const getAlbum = async (id) => {
-  const response = await fetch(url + `/album/${id}`);
+  const response = await fetch(urlInfoFetch + `/album/${id}`);
   const data = await response.json();
 
   main.innerHTML += `

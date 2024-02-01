@@ -1,9 +1,8 @@
 import { addedId } from "../index.js";
-
-const url = "https://striveschool-api.herokuapp.com/api/deezer";
+import { urlInfoFetch } from "../index.js";
 
 export const getArtist = async (id) => {
-    const response = await fetch(url + `/artist/${id}`);
+    const response = await fetch(urlInfoFetch + `/artist/${id}`);
     const data = await response.json();
   
     main.innerHTML += `
@@ -17,7 +16,7 @@ export const getArtist = async (id) => {
       
               <div class="mt-4">
                   <h2 class="text-white">Album consigliati</h2>
-                  <div id="card-container" class="card-container d-flex row justify-content-evenly mt-4 gap-4 flex-wrap">
+                  <div id="card-container-artist" class="card-container d-flex row justify-content-evenly mt-4 gap-4 flex-wrap">
   
                   </div>
               </div>
@@ -25,10 +24,9 @@ export const getArtist = async (id) => {
     `;
       const tracklist = await fetch(data.tracklist)
       const tracklistRes = await tracklist.json()
-      const cardCont = document.getElementById("card-container");
+      const cardCont = document.getElementById("card-container-artist");
   
       for (const album of tracklistRes.data) {
-  
         if (!addedId[album.album.id]) {
           cardCont.innerHTML += `
           
@@ -49,5 +47,4 @@ export const getArtist = async (id) => {
       addedId[album.album.id] = true;
       }
     }
-  
   };

@@ -1,10 +1,10 @@
 import { addedId } from "../index.js";
 import { iteraAlbumECanzoni } from "./iteraAlbumECanzoni.js";
+import { cardCont } from "../index.js";
 
 export const getData = async (url) => {
     const response = await fetch(url + "queen");
     const data = await response.json();
-    const cardCont = document.getElementById("card-container");
   
     data.data.map((found) => {
       if (!addedId[found.album.id]) {
@@ -23,6 +23,7 @@ export const getData = async (url) => {
           </p>
         </div>
       </div>`;
+
         addedId[found.album.id] = true;
       }
   
