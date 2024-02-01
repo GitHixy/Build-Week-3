@@ -1,6 +1,6 @@
 @font-face {
   font-family: Gotham;
-  src: url('./assets/font/Gotham-Black.otf')  format('opentype');
+  src: url("./assets/font/Gotham-Black.otf") format("opentype");
 }
 * {
   padding: 0;
@@ -14,7 +14,6 @@ body {
 }
 
 #sideBar_sx {
-  width: 25%;
   background-color: black;
   color: lightgray;
   padding-inline: 15px;
@@ -45,11 +44,6 @@ body {
 hr {
   border-top: 1px solid white;
   opacity: 100;
-}
-
-#main {
-  width: 75%;
-  height: 100%;
 }
 
 .btn-success {

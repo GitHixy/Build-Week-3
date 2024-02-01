@@ -2,8 +2,8 @@ import { getData } from "./components/getData.js";
 import { fetchSearch } from "./components/fetchSearch.js";
 
 export const cardCont = document.getElementById("card-container");
-export const addedId = {};
-export const urlSearch = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
+export const urlSearch =
+  "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 export const urlInfoFetch = "https://striveschool-api.herokuapp.com/api/deezer";
 
 const search = document.getElementById("search");
@@ -14,8 +14,7 @@ search.addEventListener("click", () => {
 });
 
 getData(urlSearch);
-  
+
 input.addEventListener("change", () => {
   fetchSearch(input.value, cardCont);
-})
-  
+});

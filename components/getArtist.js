@@ -2,12 +2,13 @@ import { addedId } from "../index.js";
 import { urlInfoFetch } from "../index.js";
 
 export const getArtist = async (id) => {
-    const response = await fetch(urlInfoFetch + `/artist/${id}`);
-    const data = await response.json();
-  
-    main.innerHTML += `
+  addedId = {};
+  const response = await fetch(urlInfoFetch + `/artist/${id}`);
+  const data = await response.json();
+
+  main.innerHTML += `
     <div class="artist-info ">
-              <div class="artistImg">
+              <div class="artistImg mb-3">
               <div id="gradient"></div>
                   <img src=${data.picture_xl}
                       alt="">
@@ -22,15 +23,15 @@ export const getArtist = async (id) => {
               </div>
           </div>
     `;
-      const tracklist = await fetch(data.tracklist)
-      const tracklistRes = await tracklist.json()
-      const cardCont = document.getElementById("card-container-artist");
-  
-      for (const album of tracklistRes.data) {
-        if (!addedId[album.album.id]) {
-          cardCont.innerHTML += `
+  const tracklist = await fetch(data.tracklist);
+  const tracklistRes = await tracklist.json();
+  const cardCont = document.getElementById("card-container-artist");
+
+  for (const album of tracklistRes.data) {
+    if (!addedId[album.album.id]) {
+      cardCont.innerHTML += `
           
-          <div class="card d-flex align-items-start col-lg-2">
+          <div class="card d-flex align-items-start col-lg-2 col-md-4 col-sm-6">
         <img
           id=${album.album.id}
           src=${album.album.cover_big}
@@ -45,6 +46,6 @@ export const getArtist = async (id) => {
         </div>
       </div>`;
       addedId[album.album.id] = true;
-      }
     }
-  };
+  }
+};
