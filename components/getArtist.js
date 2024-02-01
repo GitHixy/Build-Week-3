@@ -1,8 +1,7 @@
-import { addedId } from "../index.js";
 import { urlInfoFetch } from "../index.js";
 
 export const getArtist = async (id) => {
-  addedId = {};
+  let addedId = {};
   const response = await fetch(urlInfoFetch + `/artist/${id}`);
   const data = await response.json();
 
