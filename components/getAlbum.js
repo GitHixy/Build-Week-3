@@ -1,4 +1,4 @@
-import { urlInfoFetch } from "../index.js";
+import { urlInfoFetch } from "../home/index.js";
 
 export const getAlbum = async (id) => {
   const response = await fetch(urlInfoFetch + `/album/${id}`);

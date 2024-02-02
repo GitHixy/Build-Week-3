@@ -1,6 +1,6 @@
-import { getArtist } from "./components/getArtist.js";
+import { getAlbum } from "../components/getAlbum.js";
 
 const params = new URLSearchParams(document.location.search);
 const id = params.get("id");
 
-getArtist(id);
+getAlbum(id);

@@ -1,5 +1,5 @@
 import { iteraAlbumECanzoni } from "./iteraAlbumECanzoni.js";
-import { cardCont } from "../index.js";
+import { cardCont } from "../home/index.js";
 
 export const getData = async (url) => {
   let addedId = {};

@@ -5,7 +5,7 @@ export const iteraAlbumECanzoni = () => {
   for (const album of albumImg) {
     album.addEventListener("click", () => {
       window.location.assign(
-        "./album.html?id=" + album.closest("img").attributes.id.value
+        "../album/album.html?id=" + album.closest("img").attributes.id.value
       );
     });
   }
@@ -13,7 +13,7 @@ export const iteraAlbumECanzoni = () => {
   for (const artist of artistText) {
     artist.addEventListener("click", () => {
       window.location.assign(
-        "./artist.html?id=" + artist.closest("p").attributes.id.value
+        "../artist/artist.html?id=" + artist.closest("p").attributes.id.value
       );
     });
   }

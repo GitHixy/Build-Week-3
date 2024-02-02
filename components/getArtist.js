@@ -1,4 +1,4 @@
-import { urlInfoFetch } from "../index.js";
+import { urlInfoFetch } from "../home/index.js";
 
 export const getArtist = async (id) => {
   let addedId = {};
@@ -8,7 +8,6 @@ export const getArtist = async (id) => {
   main.innerHTML += `
     <div class="artist-info ">
               <div class="artistImg mb-3">
-              <div id="gradient"></div>
                   <img src=${data.picture_xl}
                       alt="">
                   </div>
@@ -16,7 +15,7 @@ export const getArtist = async (id) => {
       
               <div class="mt-4">
                   <h2 class="text-white">Album consigliati</h2>
-                  <div id="card-container-artist" class="card-container d-flex row justify-content-evenly mt-4 gap-4 flex-wrap">
+                  <div id="card-container-artist" class="card-container row mt-4 gap-4 flex-wrap">
   
                   </div>
               </div>
@@ -28,21 +27,20 @@ export const getArtist = async (id) => {
 
   for (const album of tracklistRes.data) {
     if (!addedId[album.album.id]) {
-      cardCont.innerHTML += `
-          
-          <div class="card d-flex align-items-start col-lg-2 col-md-4 col-sm-6 col-12">
-        <img
-          id=${album.album.id}
-          src=${album.album.cover_big}
-          class="album-img"
-          alt=""
-        />
-        <div class="card-body pt-0">
-          <h5 class="card-title text-white">${album.album.title}</h5>
-          <p id=${album.album.id} class="card-text">
-            ${album.artist.name}
-          </p>
-        </div>
+      cardCont.innerHTML += `   
+        <div class="card d-flex align-items-start col col-lg-2 col-md-4 col-sm-6 col-12">
+          <img
+            id=${album.album.id}
+            src=${album.album.cover_big}
+            class="album-img"
+            alt=""
+          />
+          <div class="card-body pt-0">
+            <h5 class="card-title text-white">${album.album.title}</h5>
+            <p id=${album.album.id} class="card-text">
+              ${album.artist.name}
+            </p>
+          </div>
       </div>`;
       addedId[album.album.id] = true;
     }

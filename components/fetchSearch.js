@@ -1,6 +1,6 @@
-import { cardCont } from "../index.js";
+import { cardCont } from "../home/index.js";
+import { urlSearch } from "../home/index.js";
 import { iteraAlbumECanzoni } from "./iteraAlbumECanzoni.js";
-import { urlSearch } from "../index.js";
 
 export const fetchSearch = async (inputValue) => {
   let addedId = {};
